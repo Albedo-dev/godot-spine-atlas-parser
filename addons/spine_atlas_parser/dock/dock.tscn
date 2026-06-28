@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/spine_atlas_parser/dock/dock.gd" id="1"]
+
+[node name="Dock" type="VBoxContainer"]
+script = ExtResource("1")
+
+[node name="Toolbar" type="HBoxContainer" parent="."]
+
+[node name="RescanButton" type="Button" parent="Toolbar"]
+text = "Rescan"
+
+[node name="SelectAllButton" type="Button" parent="Toolbar"]
+text = "Select All"
+
+[node name="SelectNoneButton" type="Button" parent="Toolbar"]
+text = "Select None"
+
+[node name="GenerateButton" type="Button" parent="Toolbar"]
+text = "Generate Selected"
+
+[node name="SourceRow" type="HBoxContainer" parent="."]
+
+[node name="SourceLabel" type="Label" parent="SourceRow"]
+text = "Source"
+
+[node name="SourcePath" type="LineEdit" parent="SourceRow"]
+editable = false
+size_flags_horizontal = 3
+
+[node name="SourceBrowse" type="Button" parent="SourceRow"]
+text = "Browse"
+
+[node name="OutputRow" type="HBoxContainer" parent="."]
+
+[node name="OutputLabel" type="Label" parent="OutputRow"]
+text = "Output"
+
+[node name="OutputPath" type="LineEdit" parent="OutputRow"]
+editable = false
+size_flags_horizontal = 3
+
+[node name="OutputBrowse" type="Button" parent="OutputRow"]
+text = "Browse"
+
+[node name="BundleTree" type="Tree" parent="."]
+size_flags_vertical = 3
+
+[node name="Progress" type="ProgressBar" parent="."]
+visible = false
+
+[node name="StatusLabel" type="Label" parent="."]
+text = ""
+
+[node name="GenerateScenesCheck" type="CheckBox" parent="Toolbar"]
+text = "Generate authored scenes"
+button_pressed = true
+tooltip_text = "Emit a <bundle>.tscn next to each .res. Toggling sweeps all rows."

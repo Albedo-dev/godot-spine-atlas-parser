@@ -1,0 +1,25 @@
+# Normalize EOL for all files that Git considers text files.
+* text=auto eol=lf
+
+# --- Asset Library packaging ---
+# The AssetLib download is a git archive of the published repo; everything
+# marked export-ignore is omitted, leaving only addons/spine_atlas_parser/
+# (minus its tests). These paths stay in the repo, just not in the download.
+
+# Repo-root project files (must not overwrite the installer's own)
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/.editorconfig      export-ignore
+/.gutconfig.json    export-ignore
+/README.md          export-ignore
+/LICENSE            export-ignore
+/project.godot      export-ignore
+/icon.svg           export-ignore
+/icon.svg.import    export-ignore
+
+# Test framework + the plugin's own tests (not shipped to consumers)
+/addons/gut                            export-ignore
+/addons/spine_atlas_parser/tests       export-ignore
+
+# Repo media (README screenshots) - not part of the installed plugin
+/media                                 export-ignore

@@ -1,0 +1,31 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Agent / dev tooling: present on disk so the harness works, never tracked,
+# so it stays out of the public repo and its history.
+.claude/
+.superpowers/
+/docs/
+CLAUDE.md
+TODO.md
+
+# Local design references and scratch (not shippable)
+/design/
+
+# GUT command-line run logs
+gut_out.txt
+
+# Local dock I/O: imported Spine source export and generated bundle output
+/export_test/
+/assets/
+
+# Dock's persisted source/output paths (machine-specific runtime state)
+/addons/spine_atlas_parser/tool_state.cfg
+
+# Local preview harness (loads the gitignored generated assets)
+/demo/
+
+# OS cruft
+.DS_Store
+Thumbs.db

@@ -1,0 +1,7 @@
+{
+  "dirs": ["res://addons/spine_atlas_parser/tests"],
+  "include_subdirs": false,
+  "log_level": 1,
+  "should_exit": true,
+  "should_exit_on_success": false
+}

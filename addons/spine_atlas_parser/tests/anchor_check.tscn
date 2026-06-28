@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://addons/spine_atlas_parser/tests/anchor_check.gd" id="1"]
+[ext_resource type="Script" path="res://addons/spine_atlas_parser/runtime/packed_animated_sprite_2d.gd" id="2"]
+[ext_resource type="SpriteFrames" path="res://addons/spine_atlas_parser/tests/fixtures/blue_ooze/blue_ooze.res" id="3"]
+
+[node name="AnchorCheck" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+script = ExtResource("2")
+sprite_frames = ExtResource("3")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="UI"]
+offset_left = 12
+offset_top = 8
+text = "loading..."
